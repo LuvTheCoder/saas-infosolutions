@@ -1,115 +1,124 @@
-import { useState, useRef, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import NavPanel from "./NavPanel";
 import { navData } from "./navData";
 import logo from "../assets/saas-logo.png";
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
   const [activePanel, setActivePanel] = useState(null);
-  const wrapperRef = useRef(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSubOpen, setMobileSubOpen] = useState(null); // Tracks mobile dropdowns
   const location = useLocation();
 
   const navItems = [
     { key: "solutions", label: "SOLUTIONS" },
-    { key: "services", label: "SERVICES" },
-    { key: "products", label: "PRODUCTS" },
-    // { key: "industries", label: "INDUSTRIES" },
     { key: "company", label: "COMPANY" },
   ];
 
-  // Close nav panel when clicking outside
+  // Close everything when moving to a new page
   useEffect(() => {
-    function handleOutsideClick(e) {
-      if (
-        wrapperRef.current &&
-        !wrapperRef.current.contains(e.target)
-      ) {
-        setActivePanel(null);
-      }
-    }
-
-    if (activePanel) {
-      document.addEventListener("mousedown", handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [activePanel]);
-
-    useEffect(() => {
-      setActivePanel(null);
-    }, [location.pathname]);
+    setActivePanel(null);
+    setMobileOpen(false);
+    setMobileSubOpen(null);
+  }, [location.pathname]);
 
   return (
     <>
-      {/* Wrapper MUST be relative */}
-      <div ref={wrapperRef} className="relative">
-        
-        {/* NAVBAR */}
-        <header className="bg-[#0b3c5d] text-white fixed top-0 left-0 right-0 z-50 lg:h-[80px]">
-          <div className="w-full px-6 h-full">
-            <div className="flex items-center justify-between h-full">
+      <header className="fixed top-0 left-0 right-0 z-[60] h-[70px] lg:h-[90px] bg-[#0b3c5d] border-b-2 border-white/10">
+        <div className="absolute top-0 left-0 w-full h-[4px] bg-cyan-500" />
 
-              {/* LOGO */}
-              <div className="cursor-pointer flex items-center">
-                <Link to="/">
-                    <img
-                        src={logo}
-                        alt="Company Logo"
-                        className="h-[66px] w-auto object-contain m-[5px]"
-                    />
-                </Link>
-              </div>
+        <div className="max-w-[1440px] mx-auto px-6 h-full flex items-center justify-between">
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="SAAS" className="h-[50px] lg:h-[60px] object-contain" />
+          </Link>
 
-              {/* NAV ITEMS */}
-              <nav className="hidden lg:flex items-center gap-10 font-medium">
-                {navItems.map((item) => (
-                  <button
-                    key={item.key}
-                    onClick={() =>
-                      setActivePanel(
-                        activePanel === item.key ? null : item.key
-                      )
-                    }
-                    className={` cursor-pointer flex items-center gap-1 transition text-[17px] ${
-                      activePanel === item.key
-                        ? "text-cyan-300"
-                        : "hover:text-cyan-200"
-                    }`}
-                  >
-                    {item.label}
-                    <ChevronDown
-                      size={16}
-                      className={`transition ${
-                        activePanel === item.key ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                ))}
+          {/* DESKTOP NAV */}
+          <nav className="hidden lg:flex items-center gap-10 h-full">
+            {navItems.map((item) => (
+              <button
+                key={item.key}
+                onMouseEnter={() => setActivePanel(item.key)}
+                className={`relative h-full flex items-center gap-2 text-xs font-bold tracking-[0.2em] transition-colors
+                  ${activePanel === item.key ? "text-cyan-400" : "text-white hover:text-cyan-400"}`}
+              >
+                {item.label}
+                <ChevronDown size={14} className={`${activePanel === item.key ? "rotate-180" : ""}`} />
+                {activePanel === item.key && <div className="absolute bottom-0 left-0 w-full h-[4px] bg-cyan-400" />}
+              </button>
+            ))}
+            <Link to="/contact" className="px-6 py-2 border-2 border-white text-white text-xs font-bold tracking-[0.2em] hover:bg-white hover:text-[#0b3c5d] transition-colors">
+              CONTACT US
+            </Link>
+          </nav>
 
-                <a
-                  href="#"
-                  className="hover:text-cyan-200 transition text-[17px]"
-                >
-                  CONTACT US
-                </a>
-              </nav>
-            </div>
-          </div>
-        </header>
-
-        {/* NAV PANEL – FLOATS BELOW NAVBAR */}
-        {/* NAV PANEL – FIXED BELOW NAVBAR */}
-        {activePanel && (
-        <div className="fixed left-0 top-[80px] w-full z-40">
-            <NavPanel data={navData[activePanel]} basePath={activePanel} />
+          {/* MOBILE TOGGLE */}
+          <button className="lg:hidden text-white p-2" onClick={() => setMobileOpen(true)}>
+            <Menu size={32} />
+          </button>
         </div>
-        )}
+      </header>
 
-      </div>
+      {/* DESKTOP PANEL DROPDOWN */}
+      {activePanel && (
+        <div className="hidden lg:block fixed top-[90px] left-0 w-full z-50 border-b-4 border-cyan-500" onMouseLeave={() => setActivePanel(null)}>
+          <NavPanel data={navData[activePanel]} basePath={activePanel} />
+        </div>
+      )}
+
+      {/* MOBILE FULLSCREEN MENU */}
+      {mobileOpen && (
+        <div className="fixed inset-0 bg-[#0b3c5d] z-[100] flex flex-col overflow-y-auto">
+          {/* Mobile Header */}
+          <div className="flex justify-between items-center h-[70px] px-6 border-b border-white/10 shrink-0">
+            <img src={logo} className="h-10" />
+            <button onClick={() => setMobileOpen(false)} className="text-white">
+              <X size={32} />
+            </button>
+          </div>
+
+          {/* Mobile Links */}
+          <div className="p-6 space-y-2">
+            {navItems.map((item) => (
+              <div key={item.key} className="border-b border-white/5 last:border-0">
+                <button 
+                  onClick={() => setMobileSubOpen(mobileSubOpen === item.key ? null : item.key)}
+                  className="w-full py-5 flex justify-between items-center text-white text-lg font-bold tracking-widest uppercase"
+                >
+                  {item.label}
+                  <ChevronDown className={`transition-transform duration-300 ${mobileSubOpen === item.key ? "rotate-180 text-cyan-400" : ""}`} />
+                </button>
+
+                {/* Sub-menu (Solutions/Company Links) */}
+                {mobileSubOpen === item.key && (
+                  <div className="pb-6 space-y-1 animate-in slide-in-from-top-2 duration-300">
+                    {navData[item.key].leftMenu.map((sub, i) => (
+                      <Link
+                        key={i}
+                        to={`/${item.key}/${sub.slug}`}
+                        className="flex items-center justify-between p-4 bg-white/5 rounded-lg text-white/80 text-sm font-medium hover:text-cyan-400"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {sub.label}
+                        <ArrowRight size={16} className="text-cyan-500" />
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Final Contact Link */}
+            <Link 
+              to="/contact" 
+              className="block w-full py-8 text-cyan-400 text-xl font-bold tracking-[0.2em] uppercase border-t border-white/10 mt-4"
+              onClick={() => setMobileOpen(false)}
+            >
+              CONTACT US
+            </Link>
+          </div>
+        </div>
+      )}
     </>
   );
 }

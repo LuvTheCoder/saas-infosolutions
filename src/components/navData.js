@@ -31,20 +31,20 @@ export const navData = {
       "https://images.unsplash.com/photo-1556761175-4b46a572b786",
   },
 
-  products: {
-    title: "Products",
-    leftMenu: [
-      { label: "IT Helpdesk", slug: "it-helpdesk" },
-      { label: "Asset Management", slug: "asset-management" },
-      { label: "Productivity Management", slug: "productivity-management" },
-      { label: "HRMS & Attendance", slug: "hrms-attendance" },
-    ],
-    heading: "Intelligent business platforms",
-    description:
-      "Purpose-built platforms to enhance productivity, visibility and operational control.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-  },
+  // products: {
+  //   title: "Products",
+  //   leftMenu: [
+  //     { label: "Employee Productivity Monitoring", slug: "employee-productivity" },
+  //     { label: "Asset Management", slug: "desk-booking" },
+  //     { label: "Productivity Management", slug: "productivity-management" },
+  //     { label: "HRMS & Attendance", slug: "hrms-attendance" },
+  //   ],
+  //   heading: "Intelligent business platforms",
+  //   description:
+  //     "Purpose-built platforms to enhance productivity, visibility and operational control.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+  // },
 
   // industries: {
   //   title: "Industries",
