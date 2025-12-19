@@ -6,6 +6,9 @@ import ScrollToTop from "./components/ScrollToTop";
 import About from "./pages/About";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import Leadership from "./pages/Leadership";
+import Clients from "./pages/Clients";
+import Contact from "./pages/Contact";
+
 
 
 function App() {
@@ -18,6 +21,8 @@ function App() {
         <Route path="/company/about-us" element={<About/>}></Route>
         <Route path="/company/why-choose-us" element={<WhyChooseUs/>}></Route>
         <Route path="/company/leadership" element={<Leadership/>}></Route>
+        <Route path="/company/clients" element={<Clients/>}></Route>
+        <Route path="/contact" element={<Contact/>}></Route>
       </Routes>
     </BrowserRouter>
   );

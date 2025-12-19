@@ -69,7 +69,7 @@ export const navData = {
       { label: "Leadership", slug: "leadership" },
       { label: "Why Choose Us", slug: "why-choose-us" },
       { label: "Clients", slug: "clients" },
-      { label: "Careers", slug: "careers" },
+      // { label: "Careers", slug: "careers" },
     ],
     heading: "Your trusted IT partner",
     description:

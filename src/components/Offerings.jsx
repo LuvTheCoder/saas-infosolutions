@@ -22,7 +22,7 @@ function Offerings() {
       link: "/solutions/passive-it-networking",
     },
     {
-      heading: "Digital Productivity & Automation",
+      heading: "Digital Productivity Management",
       description: "Workflow automation, BI and productivity monitoring solutions.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       link: "/solutions/digital-productivity",
@@ -90,7 +90,7 @@ function Offerings() {
 
       {/* 2. THE FLOATING GRID */}
       <div className="max-w-[1440px] mx-auto px-6 -mt-40 pb-32 relative z-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200  overflow-hidden shadow-2xl shadow-blue-900/20">
           {offerings.map((item, index) => (
             <motion.div
               key={index}

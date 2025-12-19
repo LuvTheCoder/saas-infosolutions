@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Offering from "../components/Offerings";
 import Footer from "../components/Footer";
+import Philosophy from "../components/Philosophy";
 
 function Home(){
     return(
@@ -13,6 +14,7 @@ function Home(){
             /> */}
             <Hero/>
             <Offering/>
+            <Philosophy/>
             <Footer/>
         </>
     )

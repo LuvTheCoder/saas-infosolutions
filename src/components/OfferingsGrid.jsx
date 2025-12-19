@@ -66,19 +66,24 @@ function OfferingsGrid({ data }) {
               </div>
 
               {/* GHOST IMAGE BACKGROUND */}
+              {/* GHOST IMAGE BACKGROUND */}
               <AnimatePresence>
                 {isActive && item.image && (
                   <motion.div
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 0.08 }}
+                    // INCREASE THIS VALUE (e.g., 0.3 or 0.4) for more visibility
+                    animate={{ opacity: 0.35 }} 
                     exit={{ opacity: 0 }}
                     className="absolute inset-0 z-0 pointer-events-none"
                   >
                     <img
                       src={item.image}
                       alt=""
-                      className="w-full h-full object-cover grayscale brightness-50 scale-110 group-hover:scale-100 transition-transform duration-1000"
+                      // REMOVED 'brightness-50' so the image is clearer
+                      className="w-full h-full object-cover grayscale scale-110 group-hover:scale-100 transition-transform duration-1000"
                     />
+                    {/* ADDED: A subtle gradient overlay to ensure text stays readable even with a brighter image */}
+                    <div className="absolute inset-0 bg-[#0b3c5d]/40" />
                   </motion.div>
                 )}
               </AnimatePresence>

@@ -55,13 +55,13 @@ function Footer() {
             {/* SERVICES */}
             <div>
               <h4 className="text-white text-xs font-bold uppercase tracking-[0.2em] mb-8 border-b border-white/10 pb-4">
-                Services
+                Company
               </h4>
               <ul className="space-y-4 text-sm font-medium">
-                <li><Link to="/services/it-consulting" className="hover:text-blue-400 transition-colors">IT Consulting</Link></li>
-                <li><Link to="/services/managed-it-services" className="hover:text-blue-400 transition-colors">Managed IT</Link></li>
-                <li><Link to="/services/it-support-amc" className="hover:text-blue-400 transition-colors">Support & AMC</Link></li>
-                <li><Link to="/services/greenfield-projects" className="hover:text-blue-400 transition-colors">Greenfield Projects</Link></li>
+                <li><Link to="/company/about-us" className="hover:text-blue-400 transition-colors">About Us</Link></li>
+                <li><Link to="/company/leadership" className="hover:text-blue-400 transition-colors">Leadership</Link></li>
+                <li><Link to="/company/why-choose-us" className="hover:text-blue-400 transition-colors">Why Choose Us</Link></li>
+                <li><Link to="/company/clients" className="hover:text-blue-400 transition-colors">Clients</Link></li>
               </ul>
             </div>
 

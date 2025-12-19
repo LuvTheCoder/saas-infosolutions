@@ -4,6 +4,7 @@ import AboutHero from "../components/AboutHero";
 import CountUp from "../components/CountUp";
 import Leadership from "../components/Leadership";
 import { motion } from "framer-motion";
+import Breadcrumb from "../components/Breadcrumb";
 
 function About() {
   const industries = [
@@ -16,7 +17,7 @@ function About() {
       <Navbar />
 
       <main className="pt-[80px] bg-white text-slate-900">
-        
+        <Breadcrumb items={["Home", "Company", "About Us"]}/>
         {/* 1. HERO */}
         <AboutHero />
 

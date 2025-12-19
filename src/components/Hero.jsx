@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Hero() {
   const [text, setText] = useState("");
@@ -18,28 +19,32 @@ function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-[#0b3c5d]">
       
-      {/* 1. THE BACKGROUND IMAGE */}
+      {/* 1. THE BACKGROUND IMAGE - Increased brightness and removed grayscale */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center grayscale"
+        className="absolute inset-0 z-0 bg-cover bg-center transition-all duration-1000"
         style={{ 
           backgroundImage: "url(https://images.unsplash.com/photo-1521737604893-d14cc237f11d)",
-          filter: "brightness(0.3) contrast(1.1)" // Darkens the image to keep text readable
+          filter: "brightness(0.8) contrast(1.1)" // Increased from 0.3 to 0.6 for visibility
         }}
       />
 
-      {/* 2. OVERLAY LAYERS */}
+      {/* 2. OVERLAY LAYERS - lightened and repositioned */}
       <div className="absolute inset-0 z-0">
-        {/* Subtle grid for technical feel */}
-        <div className="absolute inset-0 opacity-20" 
+        {/* Technical grid */}
+        <div className="absolute inset-0 opacity-15" 
              style={{ 
-               backgroundImage: `linear-gradient(#ffffff0a 1px, transparent 1px), linear-gradient(90deg, #ffffff0a 1px, transparent 1px)`,
-               backgroundSize: '60px 60px' 
+               backgroundImage: `linear-gradient(#ffffff1a 1px, transparent 1px), linear-gradient(90deg, #ffffff1a 1px, transparent 1px)`,
+               backgroundSize: '80px 80px' 
              }} 
         />
-        {/* Deep Blue Tint Overlay */}
-        <div className="absolute inset-0 bg-[#0b3c5d]/60 mix-blend-multiply" />
-        {/* Bottom Vignette */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0b3c5d] via-transparent to-transparent opacity-90" />
+        
+        {/* REPLACED solid blue tint with a Horizontal Gradient 
+            This keeps the RIGHT side clear for the image and the LEFT side dark for the text.
+        */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0b3c5d] via-[#0b3c5d]/40 to-transparent" />
+        
+        {/* Subtle Bottom Vignette */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0b3c5d]/80 via-transparent to-transparent opacity-60" />
       </div>
 
       {/* 3. CONTENT */}
@@ -52,44 +57,47 @@ function Hero() {
             transition={{ duration: 0.8 }}
           >
             {/* TYPING BRAND NAME */}
-            <div className="flex items-center gap-3 mb-10">
-              <span className="font-mono text-sm tracking-[0.4em] uppercase text-blue-400 font-bold">
+            <div className="flex items-center gap-3 mb-8">
+              <span className="font-mono text-xs tracking-[0.4em] uppercase text-cyan-400 font-bold">
                 {text}
-                <span className="ml-1 inline-block w-[1px] h-4 bg-white animate-pulse" />
+                <span className="ml-1 inline-block w-[2px] h-4 bg-cyan-400 animate-pulse" />
               </span>
             </div>
 
-            {/* MAIN HEADING - NO GRADIENT */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] text-white tracking-tighter mb-10">
-              Helping organisations <br />
-              <span className="text-white/40 italic font-light">
-                get future ready
+            {/* MAIN HEADING - "Customer First" philosophy focus [cite: 5, 25] */}
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold leading-[1.05] text-white tracking-tighter mb-8 uppercase">
+              SAAS INFOSOLUTIONS<br />
+              <span className="text-white/30 italic font-light capitalize">
+                Leave {" "}
               </span>
+              <span className="text-white/30 italic font-light lowercase">
+                Your IT  worries with us.  
+              </span>
+              
             </h1>
 
-            {/* DESCRIPTION */}
-            <p className="text-white/60 max-w-xl mb-12 text-lg md:text-xl font-light leading-relaxed">
-              We empower global enterprises with digital transformation 
-              through precision-engineered technological solutions.
+            {/* DESCRIPTION - End-to-end IT solutions [cite: 6] */}
+            <p className="text-white/80 max-w-xl mb-12 text-lg md:text-xl font-light leading-relaxed border-l-2 border-cyan-500 pl-6">
+              Empowering organizations with a mix of traditional and 
+              innovative IT solutions since 2015.
             </p>
 
             {/* CTAS */}
-            <div className="flex flex-col sm:flex-row gap-5">
-              <button className="px-10 py-4 font-bold bg-white text-[#0b3c5d] hover:bg-blue-50 transition-colors shadow-lg shadow-black/20">
-                Lets Connect
-              </button>
-              
-              {/* <button className="px-10 py-4 font-bold border border-white/30 text-white hover:bg-white/10 transition-colors backdrop-blur-sm">
-                View Methodology
-              </button> */}
+            <div className="flex flex-wrap gap-5 justify-start">
+              <Link 
+                to="/contact" 
+                className="w-fit inline-block bg-cyan-500 text-[#0b3c5d] px-10 py-5 font-bold uppercase tracking-[0.2em] text-xs transition-all duration-300 hover:bg-white hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] active:scale-95 border border-cyan-500"
+              >
+                Contact Us
+              </Link>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* SIDE DATA */}
-      <div className="absolute right-10 bottom-10 hidden lg:block font-mono text-[10px] text-white/30 uppercase tracking-[0.5em] rotate-90 origin-right">
-        EST. 2024 // GLOBAL SYSTEMS
+      {/* SIDE DATA - Establishment date from company profile [cite: 6] */}
+      <div className="absolute right-10 bottom-10 hidden lg:block font-mono text-[10px] text-white/40 uppercase tracking-[0.5em] rotate-90 origin-right">
+        EST. 2015 // IT ARCHITECTURE [cite: 6]
       </div>
     </section>
   );
