@@ -96,7 +96,7 @@ function Navbar() {
                       <Link
                         key={i}
                         to={`/${item.key}/${sub.slug}`}
-                        className="flex items-center justify-between p-4 bg-white/5 rounded-lg text-white/80 text-sm font-medium hover:text-cyan-400"
+                        className="flex items-center justify-between p-4 bg-white/5  text-white/80 text-sm font-medium hover:text-cyan-400"
                         onClick={() => setMobileOpen(false)}
                       >
                         {sub.label}
