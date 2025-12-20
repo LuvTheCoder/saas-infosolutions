@@ -59,7 +59,7 @@ function OurClients({ selectedPartnerIds }) {
           </p>
           <div className="hidden md:block h-px flex-1 bg-slate-200 mx-8" />
           <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#0b3c5d]">
-            Est. 2025 // Global Operations
+            Est. 2015 // Global Operations
           </p>
         </div>
       </div>
