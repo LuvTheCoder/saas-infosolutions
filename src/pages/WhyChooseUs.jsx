@@ -89,7 +89,7 @@ function WhyChooseUs() {
           {/* COMPETENCY LIST */}
           <div className="lg:col-span-7">
             <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400 mb-10">
-              // Key_Competencies [cite: 9]
+              // Key_Competencies 
             </h4>
             <div className="grid sm:grid-cols-2 gap-y-6 gap-x-12">
               {competencies.map((item, i) => (

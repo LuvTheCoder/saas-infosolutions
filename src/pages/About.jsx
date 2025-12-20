@@ -81,7 +81,7 @@ function About() {
               ].map((stat, i) => (
                 <div key={i} className="bg-white p-8 md:p-12 text-center group hover:bg-slate-50 transition-colors">
                   <span className="text-[9px] md:text-[10px] font-mono tracking-[0.3em] uppercase text-slate-400 mb-4 md:mb-6 block">
-                    Metric // 0{i + 1}
+                  
                   </span>
                   <div className="text-4xl md:text-6xl font-bold text-[#0b3c5d] tracking-tighter mb-2 md:mb-4">
                     <CountUp end={stat.val} suffix={stat.suffix} />
