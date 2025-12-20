@@ -3,6 +3,7 @@ import CountUp from "../components/CountUp"; // Using the component we built ear
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Breadcrumb from "../components/Breadcrumb";
+import MarketPieChart from "../components/MarketPieChart";
 
 function WhyChooseUs() {
   const values = [
@@ -103,43 +104,7 @@ function WhyChooseUs() {
           </div>
 
           {/* MARKET REACH BLOCK */}
-          <div className="lg:col-span-5 bg-[#0b3c5d] p-12 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 -mr-16 -mt-16 rotate-45" />
-            <h4 className="text-white text-xs font-bold uppercase tracking-[0.3em] mb-10 opacity-40">
-              Market Distribution 
-            </h4>
-            <div className="space-y-8">
-              <div className="space-y-2">
-                <div className="flex justify-between text-white text-xs font-bold mb-2">
-                  <span>IT / ITES [cite: 47]</span>
-                  <span>38%</span>
-                </div>
-                <div className="h-1 w-full bg-white/10">
-                  <motion.div 
-                    initial={{ width: 0 }} 
-                    whileInView={{ width: "38%" }} 
-                    className="h-full bg-cyan-400" 
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex justify-between text-white text-xs font-bold mb-2">
-                  <span>MANUFACTURING</span>
-                  <span>32%</span>
-                </div>
-                <div className="h-1 w-full bg-white/10">
-                  <motion.div 
-                    initial={{ width: 0 }} 
-                    whileInView={{ width: "32%" }} 
-                    className="h-full bg-blue-400" 
-                  />
-                </div>
-              </div>
-            </div>
-            <p className="mt-12 text-[10px] font-mono text-white/30 leading-loose uppercase tracking-widest">
-              Successfully serving Education, Healthcare, BFSI, and Government sectors.
-            </p>
-          </div>
+          <MarketPieChart/>
         </div>
 
       </div>

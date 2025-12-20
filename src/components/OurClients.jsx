@@ -1,106 +1,68 @@
-import { useRef } from "react";
 import { partners } from "../data/partners";
 
 function OurClients({ selectedPartnerIds }) {
-  const filteredPartners = partners.filter(p =>
+  const filteredPartners = partners.filter((p) =>
     selectedPartnerIds.includes(p.id)
   );
 
-  // For a smooth infinite loop, we triple the array to ensure no gaps
-  const scrollingPartners = [...filteredPartners, ...filteredPartners, ...filteredPartners];
-
   return (
-    <section className="py-24 bg-[#0b3c5d] w-full overflow-hidden border-t border-white/5">
-      <div className="w-full">
-        
+    <section className="py-16 md:py-24 bg-white w-full relative overflow-hidden">
+      {/* BACKGROUND: Subtle technical grid */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <div className="absolute inset-0" style={{ 
+          backgroundImage: `linear-gradient(to right, #0b3c5d 1px, transparent 1px), linear-gradient(to bottom, #0b3c5d 1px, transparent 1px)`,
+          backgroundSize: '40px 40px' 
+        }} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         {/* HEADER */}
-        <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
-          <span className="
-            font-mono text-sm tracking-[0.3em] uppercase mb-4 block
-            bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400 
-            bg-clip-text text-transparent
-          ">
-            Ecosystem
+        <div className="flex flex-col items-center text-center mb-12 md:mb-20">
+          <span className="font-mono text-[10px] tracking-[0.5em] uppercase text-[#0b3c5d] font-bold mb-4">
+            Strategic Ecosystem
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-            Our Technology <span className="text-blue-400">Partners</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#0b3c5d] tracking-tight">
+            Our Technology <span className="font-light italic">Partners</span>
           </h2>
         </div>
 
-        {/* MARQUEE CONTAINER */}
-        <div className="relative flex overflow-hidden group">
-          
-          {/* FADES: Masking the edges for a professional "dissolve" effect */}
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0b3c5d] to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#0b3c5d] to-transparent z-10 pointer-events-none" />
-
-          {/* INFINITE ANIMATION TRACK */}
-          <div className="flex animate-marquee whitespace-nowrap py-4 group-hover:pause">
-            {scrollingPartners.map((partner, index) => (
-              <div
-                key={`${partner.id}-${index}`}
-                className="
-                  mx-10 
-                  flex-shrink-0 
-                  w-48 h-28 
-                  bg-white/5 
-                  backdrop-blur-sm
-                  border border-white/10
-           
-                  flex items-center justify-center 
-                  p-6
-                  transition-all 
-                  duration-500 
-                  hover:bg-white 
-                  hover:border-blue-400
-                  hover:scale-110
-                  group/logo
-                "
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  loading="lazy"
-                  className="
-                    h-12 w-auto 
-                    object-contain 
-                    grayscale 
-                    opacity-50 
-                    brightness-200 
-                    group-hover/logo:grayscale-0 
-                    group-hover/logo:opacity-100 
-                    group-hover/logo:brightness-100
-                    transition-all 
-                    duration-500
-                  "
-                />
-              </div>
-            ))}
-          </div>
+        {/* LOGO GRID: Highly Responsive 
+            2 cols: mobile
+            3 cols: small tablets
+            4 cols: tablets/laptops
+            6 cols: desktop (best for large volumes of clients)
+        */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 border-t border-l border-slate-100">
+          {filteredPartners.map((partner) => (
+            <div
+              key={partner.id}
+              className="group relative aspect-square sm:aspect-[3/2] bg-white border-r border-b border-slate-100 flex items-center justify-center p-6 md:p-8 transition-all duration-300 hover:z-10 hover:shadow-xl"
+            >
+              {/* Subtle top-accent on hover */}
+              <div className="absolute top-0 left-0 w-full h-0.5 bg-[#0b3c5d] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                loading="lazy"
+                /* Removed grayscale so logos are clear; mix-blend-multiply ensures white backgrounds match the page */
+                className="w-full h-full object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 mix-blend-multiply"
+              />
+            </div>
+          ))}
         </div>
 
-        {/* SUBTEXT */}
-        <div className="mt-12 text-center">
-          <p className="text-blue-200/30 text-xs font-mono tracking-widest uppercase">
-            // Authorized System Integrator & Solutions Partner
+        {/* FOOTER */}
+        <div className="mt-12 md:mt-16 flex flex-col md:flex-row items-center justify-between gap-4 opacity-40">
+          <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#0b3c5d]">
+            // Authorized System Integration Network
+          </p>
+          <div className="hidden md:block h-px flex-1 bg-slate-200 mx-8" />
+          <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#0b3c5d]">
+            Est. 2025 // Global Operations
           </p>
         </div>
       </div>
-
-      {/* CSS For the Infinite Loop */}
-      <style jsx>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.33%); }
-        }
-        .animate-marquee {
-          display: flex;
-          animation: marquee 40s linear infinite;
-        }
-        .group-hover\:pause:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 }

@@ -9,7 +9,7 @@ function Contact() {
     {
       icon: <Phone size={28} className="text-cyan-500" />,
       title: "Call Us",
-      details: ["+91 9822302098", "+91 7757007291"],
+      details: ["Ashish Chunne : +91 9822302098", `Amit Pote : ${"\t"}+91 7757007291`],
       description: "Direct lines to our executive leadership."
     },
     {

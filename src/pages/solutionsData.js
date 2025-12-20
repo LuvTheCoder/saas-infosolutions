@@ -6,7 +6,7 @@ export const solutionsData = {
     title: "IT Security",
     slug: "it-security",
     breadcrumbPath: ["Home", "Solutions", "IT Security"],
-    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f",
+    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg",
     tagline: "Product-agnostic security architectures built for business resilience.",
     philosophy: [
       "Simplicity over complexity: Security must align with business flow.",
@@ -18,7 +18,7 @@ export const solutionsData = {
       {
         title: "Firewall/UTM, NGFW, Virtual Firewalls, IoT Firewall",
         subtitle: "Perimeter & Edge Protection",
-        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+        image: "https://plus.unsplash.com/premium_photo-1681487814165-018814e29155?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Comprehensive boundary protection including Next-Gen and specialized IoT Firewalls."
       },
       {
@@ -36,7 +36,7 @@ export const solutionsData = {
       {
         title: "Identity & Access Management",
         subtitle: "User Authentication & Governance",
-        image: "https://images.unsplash.com/photo-1633113215888-4c67c3f94c74",
+        image: "https://plus.unsplash.com/premium_photo-1729574858839-5a145c914bac?q=80&w=1188&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Managing secure identities and controlling access permissions to critical systems."
       },
       {
@@ -48,7 +48,7 @@ export const solutionsData = {
       {
         title: "Email Security",
         subtitle: "Messaging Protection",
-        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
+        image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Shielding primary communication channels from phishing, malware, and BEC attacks."
       },
       {
@@ -84,13 +84,13 @@ export const solutionsData = {
       {
         title: "Backup",
         subtitle: "Data Continuity",
-        image: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
+        image: "https://images.unsplash.com/photo-1624895608078-e9f564cbe3fa?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Ensuring business resilience through secure, reliable, and redundant data backups."
       },
       {
         title: "MDM",
         subtitle: "Mobile Device Management",
-        image: "https://images.unsplash.com/photo-1581093458791-9d42d9f4f9b4",
+        image: "https://plus.unsplash.com/premium_photo-1687558345854-a07ac0be8cd6?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Securing, managing, and enforcing policies on company and personal mobile assets."
       },
       {
@@ -113,7 +113,7 @@ export const solutionsData = {
       },
     ],
     industries: ["Manufacturing", "IT & ITES", "Healthcare", "Education", "Corporate Offices"],
-    selectedPartnerIds: ["fortinet", "sophos", "paloalto", "crowdstrike", "checkpoint", "zscaler"]
+    selectedPartnerIds: ["fortinet", "sophos", "paloalto", "crowdstrike", "forcepoint", "checkpoint", "cisco", "bitdefender", "sentinalone", "brandsek", "zscaler", "eset", "manageengine", "logmein", "entrust", "netskope", "proofpoint", "proofid", "teamob"]
   },
 
   /* =======================================================
@@ -123,7 +123,7 @@ export const solutionsData = {
     title: "Active IT Networking",
     slug: "active-it-networking",
     breadcrumbPath: ["Home", "Solutions", "Active Networking"],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tagline: "Intelligent communication backbones designed for zero-latency operations.",
     philosophy: [
       "Layered Precision: Defined Core, Distribution, and Access architectures.",
@@ -147,13 +147,13 @@ export const solutionsData = {
       {
         title: "Network Management Solutions",
         subtitle: "Centralized Fault Monitoring",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+        image: "https://plus.unsplash.com/premium_photo-1661644892901-b2e08b5c0bf2?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Unified tools for fault detection and easy management of organizational network health."
       },
       {
         title: "Networking Support AMC",
         subtitle: "Infrastructure Maintenance",
-        image: "https://images.unsplash.com/photo-1581092918367-3e7e1c47c6c2",
+        image: "https://plus.unsplash.com/premium_photo-1661765192121-f398fd1e8fa2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Ensuring 24/7 uptime through proactive hardware maintenance and troubleshooting support."
       },
       {
@@ -164,7 +164,7 @@ export const solutionsData = {
       },
     ],
     industries: ["Manufacturing", "Education", "Corporate Offices", "IT & ITES"],
-    selectedPartnerIds: ["cisco", "ciscomeraki", "hpe", "aruba", "juniper", "ubiquiti"]
+    selectedPartnerIds: ["cisco", "ciscomeraki", "hpe", "dlink", "sophos", "fortinet", "juniper", "ruckus", "extreme", "ubiquiti", "tplink", "netgear", "ruijie", "quantum", "ray", "brocade"]
   },
 
   /* =======================================================
@@ -174,7 +174,7 @@ export const solutionsData = {
     title: "Passive IT Networking",
     slug: "passive-it-networking",
     breadcrumbPath: ["Home", "Solutions", "Passive Networking"],
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8",
+    image: "https://images.unsplash.com/photo-1551703599-2a53f65da7e7?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tagline: "The physical foundation of high-performance enterprise data flow.",
     philosophy: [
       "Structural Integrity: Structured cabling for maximum scalability.",
@@ -186,13 +186,13 @@ export const solutionsData = {
       {
         title: "Structural Cabling – Copper",
         subtitle: "High-Speed Copper Infrastructure",
-        image: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
+        image: "https://images.unsplash.com/photo-1678119895596-411628b1f6be?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Standardized Cat6/Cat6a cabling to support reliable data and voice signal transmission."
       },
       {
         title: "Structural Cabling – Fiber",
         subtitle: "Optical Fiber Backbones",
-        image: "https://images.unsplash.com/photo-1581092918367-3e7e1c47c6c2",
+        image: "https://plus.unsplash.com/premium_photo-1760010673663-0298dbf01703?q=80&w=1046&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Long-distance, high-bandwidth optical backbones designed for minimal signal loss."
       },
       {
@@ -210,12 +210,12 @@ export const solutionsData = {
       {
         title: "Network Topology Consulting",
         subtitle: "Physical Path Design",
-        image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+        image: "https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Consulting on efficient physical layouts like Star, Tree, or Mesh topologies."
       },
     ],
     industries: ["Manufacturing", "Education", "Healthcare", "Corporate Offices"],
-    selectedPartnerIds: ["commscope", "dlink", "molex", "panduit", "legrand"]
+    selectedPartnerIds: ["commscope", "dlink", "molex","ram","panduit", "legrand", "digisol", "tplink", "belden", "corning", "finolex", "honeywell", "netrack", "apw", "rittal"]
   },
 
   /* =======================================================
@@ -225,7 +225,7 @@ export const solutionsData = {
     title: "IT Software & Tools",
     slug: "it-software",
     breadcrumbPath: ["Home", "Solutions", "IT Tools"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tagline: "Maximizing operational control through intelligent software integration.",
     philosophy: [
       "Centralized Control: Moving from disparate tools to unified dashboards.",
@@ -237,7 +237,7 @@ export const solutionsData = {
       {
         title: "Attendance Management",
         subtitle: "Workforce Presence Tracking",
-        image: "https://images.unsplash.com/photo-1581092335397-9583eb92d232",
+        image: "https://plus.unsplash.com/premium_photo-1679547202671-f9dbbf466db4?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Accurate tracking of login, logout, and productive hours for employee work analysis."
       },
       {
@@ -249,19 +249,19 @@ export const solutionsData = {
       {
         title: "Inventory Management",
         subtitle: "Stock & Software Control",
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+        image: "https://plus.unsplash.com/premium_photo-1681426710520-7c56c9f563d2?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Comprehensive tracking of organizational hardware and software inventories."
       },
       {
         title: "Asset Management",
         subtitle: "Lifecycle Tracking",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+        image: "https://plus.unsplash.com/premium_photo-1661443781814-333019eaad2d?q=80&w=1251&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Full lifecycle oversight of physical and digital assets from procurement to disposal."
       },
       {
         title: "Patch Management",
         subtitle: "Automated Updates",
-        image: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
+        image: "https://images.unsplash.com/photo-1729786423717-07716ec501e9?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Automating software updates across the enterprise to close security gaps."
       },
       {
@@ -273,7 +273,7 @@ export const solutionsData = {
       {
         title: "ID Printers",
         subtitle: "Card Production Systems",
-        image: "https://images.unsplash.com/photo-1600267165477-6d4cc741b379",
+        image: "https://images.unsplash.com/photo-1739826294194-9e0ceaea136f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Professional printing systems for secure employee and visitor identification cards."
       },
       {
@@ -291,19 +291,19 @@ export const solutionsData = {
       {
         title: "AD Management",
         subtitle: "Active Directory Governance",
-        image: "https://images.unsplash.com/photo-1633113215844-2d04a60b943d",
+        image: "https://plus.unsplash.com/premium_photo-1664297989345-f4ff2063b212?q=80&w=1098&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Centralized administration of users, groups, and permissions within the directory."
       },
       {
         title: "AD Audit Tool",
         subtitle: "Directory Compliance Auditing",
-        image: "https://images.unsplash.com/photo-1633113215844-2d04a60b943d",
+        image: "https://images.unsplash.com/photo-1632810757338-2f51452c8511?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Automated auditing of Active Directory changes to maintain strict security posture."
       },
       {
         title: "AD Selfservice Tool",
         subtitle: "User Empowered Recovery",
-        image: "https://images.unsplash.com/photo-1633113215844-2d04a60b943d",
+        image: "https://plus.unsplash.com/premium_photo-1664297989345-f4ff2063b212?q=80&w=1098&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Self-service password reset and identity recovery to reduce helpdesk load."
       },
       {
@@ -321,7 +321,7 @@ export const solutionsData = {
       {
         title: "VR Tool",
         subtitle: "Immersive Technology",
-        image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620",
+        image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=878&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Virtual Reality tools for immersive training, simulation, and organizational support."
       },
       {
@@ -345,13 +345,13 @@ export const solutionsData = {
       {
         title: "Task Management",
         subtitle: "Workload Orchestration",
-        image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b",
+        image: "https://plus.unsplash.com/premium_photo-1721936482448-1400b30b3c00?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Coordinating complex organizational tasks with real-time status and accountability."
       },
       {
         title: "HRMS",
         subtitle: "Human Resource Systems",
-        image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b",
+        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Integrated platforms to manage core HR processes, onboarding, and payroll."
       },
       {
@@ -369,7 +369,7 @@ export const solutionsData = {
       {
         title: "Data Eraser",
         subtitle: "Secure Sanitization",
-        image: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
+        image: "https://plus.unsplash.com/premium_photo-1683198950864-62914db9e195?q=80&w=1057&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Certified data wiping to ensure permanent removal of sensitive data before disposal."
       },
       {
@@ -387,7 +387,7 @@ export const solutionsData = {
       {
         title: "Humidity Sensor",
         subtitle: "Datacenter Environmentals",
-        image: "https://images.unsplash.com/photo-1581092921461-7d65507b399a",
+        image: "https://plus.unsplash.com/premium_photo-1663054563006-a4d84cda7204?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Environmental monitoring to protect critical hardware from moisture damage."
       },
       {
@@ -398,7 +398,7 @@ export const solutionsData = {
       },
     ],
     industries: ["IT & ITES", "Corporate Offices", "Manufacturing"],
-    selectedPartnerIds: ["manageengine", "teamob", "logmein", "teamviewer", "motadata"]
+    selectedPartnerIds: ["manageengine", "teamob", "logmein", "teamviewer", "motadata", "fargo", "kaseya", "stratemis"]
   },
 
   /* =======================================================
@@ -408,7 +408,7 @@ export const solutionsData = {
     title: "Digital Productivity",
     slug: "digital-productivity",
     breadcrumbPath: ["Home", "Solutions", "Productivity"],
-    image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc",
+    image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tagline: "Actionable performance metrics for the modern distributed workforce.",
     philosophy: [
       "Visibility: Understanding time allocation across business-critical apps.",
@@ -453,7 +453,7 @@ export const solutionsData = {
     title: "Automation",
     slug: "automation",
     breadcrumbPath: ["Home", "Solutions", "Automation"],
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tagline: "Eliminating human error through digital process orchestration.",
     philosophy: [
       "Process Optimization: Replacing manual repetition with digital flows.",
@@ -465,25 +465,25 @@ export const solutionsData = {
       {
         title: "Cloud Database",
         subtitle: "Scalable Data Storage",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+        image: "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg",
         description: "Modernized cloud databases acting as the central pool for automated data processing."
       },
       {
         title: "Data Analysis & Visualization",
         subtitle: "Intelligent Insights",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+        image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg",
         description: "Transforming raw operational data into interactive visualizations for analysis."
       },
       {
         title: "Reporting & Dashboarding",
         subtitle: "Real-time Executive Overviews",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+        image: "https://plus.unsplash.com/premium_photo-1661700152890-931fb04588e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Custom dashboards that provide live status on automated business processes."
       },
       {
         title: "Consulting & Services",
         subtitle: "Automation Strategy",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+        image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description: "Professional consulting to identify and implement high-impact automation workflows."
       },
     ],

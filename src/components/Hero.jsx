@@ -23,7 +23,7 @@ function Hero() {
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center transition-all duration-1000"
         style={{ 
-          backgroundImage: "url(https://images.unsplash.com/photo-1521737604893-d14cc237f11d)",
+          backgroundImage: "url(https://images.unsplash.com/photo-1610374792793-f016b77ca51a?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
           filter: "brightness(0.8) contrast(1.1)" // Increased from 0.3 to 0.6 for visibility
         }}
       />

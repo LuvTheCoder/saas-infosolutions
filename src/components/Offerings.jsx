@@ -12,31 +12,31 @@ function Offerings() {
     {
       heading: "IT Networking (Active)",
       description: "End-to-end active networking solutions designed for scalability and reliability.",
-      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1170&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/solutions/active-it-networking",
     },
     {
       heading: "IT Networking (Passive)",
       description: "End-to-end passive networking solutions designed for scalability and reliability.",
-      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1170&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1551703599-2a53f65da7e7?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/solutions/passive-it-networking",
     },
     {
       heading: "Digital Productivity Management",
       description: "Workflow automation, BI and productivity monitoring solutions.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+      image: "https://images.pexels.com/photos/8101597/pexels-photo-8101597.jpeg",
       link: "/solutions/digital-productivity",
     },
     {
       heading: "IT Software & Tools",
       description: "Modern IT environments require multiple tools for daily operations.",
-      image: "https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg",
+      image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/solutions/it-software"
     },
     {
       heading: "Automation",
       description: "Servers, storage, backup, AMC and IT support outsourcing for seamless operations.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/solutions/automation",
     },
   ];

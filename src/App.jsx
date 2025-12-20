@@ -8,6 +8,7 @@ import WhyChooseUs from "./pages/WhyChooseUs";
 import Leadership from "./pages/Leadership";
 import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/company/leadership" element={<Leadership/>}></Route>
         <Route path="/company/clients" element={<Clients/>}></Route>
         <Route path="/contact" element={<Contact/>}></Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

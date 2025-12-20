@@ -72,7 +72,7 @@ function OfferingsGrid({ data }) {
                   <motion.div
                     initial={{ opacity: 0 }}
                     // INCREASE THIS VALUE (e.g., 0.3 or 0.4) for more visibility
-                    animate={{ opacity: 0.35 }} 
+                    animate={{ opacity: 0.8}} 
                     exit={{ opacity: 0 }}
                     className="absolute inset-0 z-0 pointer-events-none"
                   >

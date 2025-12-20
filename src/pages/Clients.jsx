@@ -75,7 +75,7 @@ function Clients() {
                         <img 
                           src={partner.logo} 
                           alt={partner.name} 
-                          className="max-h-full max-w-full object-contain max-lg:grayscale-0 grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110"
+                          className="max-h-full max-w-full object-contain max-lg:grayscale-0  group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110"
                         />
                       </div>
                     ))}
